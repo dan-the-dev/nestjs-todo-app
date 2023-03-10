@@ -71,3 +71,15 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Tutorial Documentation
+
+### Objective 1: Walking Skeleton
+
+Create a basic NestJS application, Dockerized and with a single endpoint. Then, setup a pipeline to execute tests and deploy it through Vercel.
+
+List of sources:
+
+- Dockerized NestJS tutorial: <https://dev.to/erezhod/setting-up-a-nestjs-project-with-docker-for-back-end-development-30lg>
+- Moved NestJS CLI from devDependencies to Dependencies: <https://stackoverflow.com/a/60555301/6894377>
+- A second tutorial since Dockerfile from the first article didn't work: <https://www.tomray.dev/nestjs-docker-production>
