@@ -5,5 +5,8 @@ start-backend:
 stop-backend:
 	docker-compose down
 
-test-backend:
-	docker-compose run --rm backend npm test
+npm-test:
+	docker-compose run --rm backend npm run test
+
+npm-test-e2e:
+	docker-compose run --rm backend npm run test:e2e
