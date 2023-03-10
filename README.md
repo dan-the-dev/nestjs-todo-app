@@ -85,7 +85,12 @@ List of sources:
 - A second tutorial since Dockerfile from the first article didn't work: <https://www.tomray.dev/nestjs-docker-production>
 - Tutorial for deploying NestJS to Vercel: <https://levelup.gitconnected.com/how-to-deploy-your-nestjs-apps-on-vercel-3431b9f2b4c6>
 
+DONE
+
 ### Objective 2: move deploy to GitHub Actions
+
+- GitHub Actions deploy for NestJS: <https://blog.devgenius.io/learn-ci-cd-with-github-actions-to-deploy-a-nestjs-app-to-heroku-8feb715d3ce7?gi=20f6423232e7>
+- GitHub Action for Vercel deploy: <https://github.com/amondnet/vercel-action>
 
 ### Objective 3: add tests in pipeline
 

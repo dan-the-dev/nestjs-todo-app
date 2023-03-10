@@ -4,3 +4,6 @@ start-backend:
 
 stop-backend:
 	docker-compose down
+
+test-backend:
+	docker-compose run --rm backend npm test
