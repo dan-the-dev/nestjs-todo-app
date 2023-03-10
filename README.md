@@ -87,12 +87,29 @@ List of sources:
 
 DONE
 
-### Objective 2: move deploy to GitHub Actions
+### Objective 2: move deploy to GitHub Actions + add tests in pipeline
 
 - GitHub Actions deploy for NestJS: <https://blog.devgenius.io/learn-ci-cd-with-github-actions-to-deploy-a-nestjs-app-to-heroku-8feb715d3ce7?gi=20f6423232e7>
 - GitHub Action for Vercel deploy: <https://github.com/amondnet/vercel-action>
 
-### Objective 3: add tests in pipeline
+DONE
 
-### Objective 4: add Postgres support with migrations and ORM/DB library
+### Objective 3: add Postgres support with migrations and ORM/DB library
 
+- NestJS Official Doc about Database: <https://docs.nestjs.com/techniques/database#typeorm-integration> (I choosed TypeORM)
+- TypeORM official doc about Migrations: <https://typeorm.io/migrations#creating-a-new-migration>
+- Additional blog post for Postgres integration on TypeORM: <https://www.thisdot.co/blog/connecting-to-postgresql-using-typeorm>
+- <https://stackoverflow.com/questions/71625087/typeorm-migration-file-must-contain-a-typescript-javascript-code-and-export-a>
+- <https://anjith-p.medium.com/typeorm-database-migrations-in-nestjs-apps-ace923edf1bf>
+- Seeding: <https://dev.to/franciscomendes10866/how-to-seed-database-using-typeorm-seeding-4kd5>
+
+TODO:
+
+1. use seeder to fill the Movie table records with the same data from the current API stub
+2. add migrations and seeder to pipeline
+3. configure postgres env vars from supabase on github actions
+4. verify deployment with migrations and seeders
+
+### Objective 4: use the table
+
+Change the API to respond reading Movies from table (with repository pattern and tests)
