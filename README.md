@@ -2,9 +2,6 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
   <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
@@ -29,7 +26,7 @@
 ## Installation
 
 ```bash
-$ npm install
+npm install
 ```
 
 ## Running the app
@@ -74,7 +71,7 @@ Nest is [MIT licensed](LICENSE).
 
 ## Tutorial Documentation
 
-### Objective 1: Walking Skeleton
+### Objective 1: Walking Skeleton (day 1: Fri 10 March 2023)
 
 Create a basic NestJS application, Dockerized and with a single endpoint. Then, setup a pipeline to deploy it through Vercel.
 
@@ -103,9 +100,9 @@ DONE
 - <https://anjith-p.medium.com/typeorm-database-migrations-in-nestjs-apps-ace923edf1bf>
 - Seeding: <https://dev.to/franciscomendes10866/how-to-seed-database-using-typeorm-seeding-4kd5>
 
-TODO:
+TODO: (day 2: Sun 12 March 2023)
 
-1. use seeder to fill the Movie table records with the same data from the current API stub
+1. use seeder to fill the Movie table records with the same data from the current API stub --> seeder and faker are incompatible with 0.3 version of typeorm, so faker was't working, trying to do it without fakers (it would have been temporary anyway) --> also seeding seems to be broken, the error seems to be related to this [issue](https://github.com/typeorm/typeorm/issues/4068) but if I change the export still doesn't work and also migrations broke up. will leave seeder by for now, but typeorm seems still a bit unmature
 2. add migrations and seeder to pipeline
 3. configure postgres env vars from supabase on github actions
 4. verify deployment with migrations and seeders
@@ -113,3 +110,8 @@ TODO:
 ### Objective 4: use the table
 
 Change the API to respond reading Movies from table (with repository pattern and tests)
+
+### Objective 5: start tutorial
+
+<https://taylor-reis.com/blog/building-a-nestjs-crud-app:-part-1/>
+<>

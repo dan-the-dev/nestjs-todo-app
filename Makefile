@@ -22,15 +22,3 @@ npm-install:
 
 npm-install-dev:
 	docker-compose run --rm backend npm install --save-dev $(lib)
-
-typeorm-create-entity:
-	docker-compose run --rm backend npm run typeorm entity:create src/entities/$(name)
-
-typeorm-create-migration:
-	docker-compose run --rm backend npm run typeorm migration:create db/migrations/$(name)
-
-typeorm-migration-run:
-	docker-compose run --rm backend npm run typeorm migration:run -- -d ./dbconfig.ts
-
-typeorm-migration-revert:
-	docker-compose run --rm backend npm run typeorm migration:revert -- -d ./dbconfig.ts
