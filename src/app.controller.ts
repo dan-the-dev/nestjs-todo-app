@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getMovies(): Movie[] {
+  getMovies(): Promise<Movie[]> {
     return this.appService.getMovies();
   }
 }

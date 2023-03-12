@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { PrismaClient } from '@prisma/client';
 
 export interface Movie {
   id: number;
@@ -6,15 +7,14 @@ export interface Movie {
   year: number;
 }
 
+const prisma = new PrismaClient();
+
 @Injectable()
 export class AppService {
-  private movies: Movie[] = [
-    { id: 1, name: 'Star Wars: The Force Awakens', year: 2015 },
-    { id: 2, name: 'Star Wars: The Last Jedi', year: 2017 },
-    { id: 3, name: 'Star Wars: The Rise of Skywalker', year: 2019 },
-  ];
+  private movies: Movie[];
 
-  getMovies(): Movie[] {
+  async getMovies(): Promise<Movie[]> {
+    this.movies = await prisma.movie.findMany();
     return this.movies;
   }
 }

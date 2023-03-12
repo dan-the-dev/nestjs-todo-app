@@ -22,3 +22,9 @@ npm-install:
 
 npm-install-dev:
 	docker-compose run --rm backend npm install --save-dev $(lib)
+
+migrate:
+	docker-compose run --rm backend npx prisma migrate dev --name $(name)
+
+seed:
+	docker-compose run --rm backend npx prisma db seed

@@ -103,15 +103,23 @@ DONE
 TODO: (day 2: Sun 12 March 2023)
 
 1. use seeder to fill the Movie table records with the same data from the current API stub --> seeder and faker are incompatible with 0.3 version of typeorm, so faker was't working, trying to do it without fakers (it would have been temporary anyway) --> also seeding seems to be broken, the error seems to be related to this [issue](https://github.com/typeorm/typeorm/issues/4068) but if I change the export still doesn't work and also migrations broke up. will leave seeder by for now, but typeorm seems still a bit unmature
-2. add migrations and seeder to pipeline
+2. add migrations and seeder to pipeline --> decided to add only migration and moving on, but realized that the same error wrote before happens in inizializing the application so I have to remove typeORM, will give a try to Prisma that should be more mature
 3. configure postgres env vars from supabase on github actions
 4. verify deployment with migrations and seeders
 
-### Objective 4: use the table
+NEW TODO: Move to Prisma (day 2: Sun 12 March 2023)
 
-Change the API to respond reading Movies from table (with repository pattern and tests)
+- NestJS page dedicated to Prisma: <https://docs.nestjs.com/recipes/prisma>
+- Prisma doc: <https://www.prisma.io/docs/guides/database/seed-database>
 
-### Objective 5: start tutorial
+1. install Prisma and recreate the Movie table migration
+2. use seeder to fill the Movie table records with the same data from the current API stub
+3. use Prima to read from table and replace current stubbed data
+4. add migrations and seeder to pipeline
+5. configure postgres env vars from supabase on github actions
+6. verify deployment with migrations and seeders
+
+### Objective 4: start tutorial
 
 <https://taylor-reis.com/blog/building-a-nestjs-crud-app:-part-1/>
 <>
