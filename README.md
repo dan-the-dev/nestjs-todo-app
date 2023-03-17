@@ -115,9 +115,9 @@ NEW TODO: Move to Prisma (day 2: Sun 12 March 2023)
 1. install Prisma and recreate the Movie table migration [v]
 2. use seeder to fill the Movie table records with the same data from the current API stub [v]
 3. use Prima to read from table and replace current stubbed data [v]
-4. add migrations and seeder to pipeline --> todo
-5. configure postgres env vars from supabase on github actions
-6. verify deployment with migrations and seeders
+4. add migrations and seeder to pipeline [v]
+5. configure postgres env vars from supabase on github actions [v]
+6. verify deployment with migrations and seeders [v]
 
 ### Objective 4: start tutorial
 
