@@ -15,8 +15,8 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return Star Wars movies', () => {
-      expect(appController.getMovies()).toStrictEqual([
+    it('should return Star Wars movies', async () => {
+      expect(await appController.getMovies()).toStrictEqual([
         { id: 1, name: 'Star Wars: The Force Awakens', year: 2015 },
         { id: 2, name: 'Star Wars: The Last Jedi', year: 2017 },
         { id: 3, name: 'Star Wars: The Rise of Skywalker', year: 2019 },
