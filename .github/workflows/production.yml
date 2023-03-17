@@ -35,6 +35,7 @@ jobs:
     - run: npm run test
     - run: npm run test:e2e
     - run: npx prisma migrate deploy
+    - run: npx prisma db seed
       env:
         DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
