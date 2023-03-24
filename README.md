@@ -122,4 +122,29 @@ NEW TODO: Move to Prisma (day 2: Sun 12 March 2023)
 ### Objective 4: start tutorial
 
 <https://taylor-reis.com/blog/building-a-nestjs-crud-app:-part-1/>
-<>
+
+Curl examples:
+
+- Get all TODOS:
+
+`curl 'http://localhost:3000/todos'`
+
+- Get one TODO:
+
+`curl 'http://localhost:3000/todos/1'`
+
+- Create a new TODO:
+
+`curl -XPOST -H "Content-type: application/json" -d '{
+ "description": "Prova todo"
+}' 'http://localhost:3000/todos'`
+
+- Update an existing TODO:
+
+`curl -XPUT -H "Content-type: application/json" -d '{
+ "description": "Prova todo update"
+}' 'http://localhost:3000/todos/1'`
+
+- Delete an existing TODO:
+
+`curl -XDELETE 'http://localhost:3000/todos/1'`

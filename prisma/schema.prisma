@@ -15,3 +15,10 @@ model Movie {
   name  String
   year  Int
 }
+
+model Todo {
+  id          Int       @default(autoincrement()) @id
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  description String
+}

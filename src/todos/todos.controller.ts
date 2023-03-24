@@ -3,21 +3,22 @@ import {
   Get,
   Post,
   Body,
-  Patch,
+  Put,
   Param,
   Delete,
 } from '@nestjs/common';
+// import the Prisma client to access our generated types
+import { Prisma } from '@prisma/client';
 import { TodosService } from './todos.service';
-import { CreateTodoDto } from './dto/create-todo.dto';
-import { UpdateTodoDto } from './dto/update-todo.dto';
 
-@Controller('todos') // namespace (http://localhost/todos)
+@Controller('todos')
 export class TodosController {
   constructor(private readonly todosService: TodosService) {}
 
+  // notice the Prisma type that was created: Prisma.TodoCreateInput
   @Post()
-  create(@Body() createTodoDto: CreateTodoDto) {
-    return this.todosService.create(createTodoDto);
+  create(@Body() todo: Prisma.TodoCreateInput) {
+    return this.todosService.create(todo);
   }
 
   @Get()
@@ -30,9 +31,10 @@ export class TodosController {
     return this.todosService.findOne(+id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateTodoDto: UpdateTodoDto) {
-    return this.todosService.update(+id, updateTodoDto);
+  // again, Prisma has generated a useful type for us to describe the shape of our update data
+  @Put(':id')
+  update(@Param('id') id: string, @Body() todo: Prisma.TodoUpdateInput) {
+    return this.todosService.update(+id, todo);
   }
 
   @Delete(':id')
