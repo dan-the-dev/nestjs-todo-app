@@ -148,3 +148,8 @@ Curl examples:
 - Delete an existing TODO:
 
 `curl -XDELETE 'http://localhost:3000/todos/1'`
+
+### Nest Steps possibili
+
+- follow part 2 <https://taylor-reis.com/blog/building-a-nestjs-crud-app:-part-2/> (add owner to Todos and handle auth)
+- create a sample project
