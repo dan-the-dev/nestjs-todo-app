@@ -8,6 +8,9 @@ stop-backend:
 install:
 	docker-compose run --rm backend npm install
 
+build:
+	docker-compose run --rm backend npm run build
+
 npm-test:
 	docker-compose run --rm backend npm run test
 
@@ -28,3 +31,6 @@ migrate:
 
 seed:
 	docker-compose run --rm backend npx prisma db seed
+
+generate-resource:
+	docker-compose run --rm backend nest generate resource $(name)
